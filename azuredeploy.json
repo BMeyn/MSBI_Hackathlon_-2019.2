@@ -4,7 +4,7 @@
     "parameters": {
         "StorageAccName": {
             "type": "string",
-            "defaultValue": "storageacc-msbi-hackathlon"
+            "defaultValue": "storageaccmsbi"
         },
 
         "CustomVisionTrainingName":{
@@ -111,8 +111,12 @@
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
             "sku": {
-              "name": "[parameters('CustomVisionTrainPriceTier')]"
-            },
+                "name": "B1",
+                "tier": "Basic",
+                "size": "B1",
+                "family": "B",
+                "capacity": 1
+        },
             "kind": "CustomVision.Training",
             "properties": {}
         },
@@ -122,8 +126,12 @@
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
             "sku": {
-                "name": "[parameters('CustomVisionPredPriceTier')]"
-            },
+                "name": "B1",
+                "tier": "Basic",
+                "size": "B1",
+                "family": "B",
+                "capacity": 1
+        },
             "kind": "CustomVision.Prediction",
             "properties": {}
         },
