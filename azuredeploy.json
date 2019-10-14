@@ -4,7 +4,7 @@
     "parameters": {
         "StorageAccName": {
             "type": "string",
-            "defaultValue": "storeacctest"
+            "defaultValue": "storeacc-msbi-hackathlon"
         }
     },
     "variables": {},
