@@ -110,10 +110,10 @@
             "name": "[parameters('CustomVisionTrainingName')]",
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
-            "kind": "CustomVision.Training",
             "sku": {
               "name": "[parameters('CustomVisionTrainPriceTier')]"
             },
+            "kind": "CustomVision.Training",
             "properties": {}
         },
         {
@@ -121,10 +121,10 @@
             "name": "[parameters('CustomVisionPredictionName')]",
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
-            "kind": "CustomVision.Prediction",
             "sku": {
                 "name": "[parameters('CustomVisionPredPriceTier')]"
             },
+            "kind": "CustomVision.Prediction",
             "properties": {}
         },
         {
