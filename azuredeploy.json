@@ -316,7 +316,7 @@
                 "Application_Type": "web",
                 "Request_Source": "IbizaWebAppExtensionCreate"
             }
-        },
+        }
     ],
     "outputs": {}
 }
