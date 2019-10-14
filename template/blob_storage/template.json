@@ -1,0 +1,92 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "ResourceGroupName": {"type": "string"},
+        "ResourceLocation": {"type": "string"},
+        "StorageAccName": {"type": "string"}
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2018-05-01",
+            "location": "[parameters('ResourceLocation')]",
+            "name": "[parameters('ResourceGroupName')]",
+            "properties": {}  
+        },
+        {
+            "name": "[parameters('StorageAccName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2015-06-15",
+            "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "[parameters('StorageAccName')]"
+            },
+            "properties": {
+                "accountType": "Standard_LRS"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Resources/resourceGroups', parameters('ResourceGroupName'))]"
+            ]
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(parameters('StorageAccName'), '/default')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]"
+            ],
+            "properties": {
+                "cors": {
+                    "corsRules": [
+                        {
+                            "allowedOrigins": [
+                                "https://mlworkspace.azure.ai"
+                            ],
+                            "allowedMethods": [
+                                "GET"
+                            ],
+                            "maxAgeInSeconds": 1800,
+                            "exposedHeaders": [
+                                "*"
+                            ],
+                            "allowedHeaders": [
+                                "*"
+                            ]
+                        }
+                    ]
+                },
+                "deleteRetentionPolicy": {
+                    "enabled": false
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(parameters('StorageAccName'), '/default/dropzone')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('StorageAccName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+        }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
+            "apiVersion": "2019-04-01",
+            "name": "[concat(parameters('StorageAccName'), '/default/results')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Storage/storageAccounts/blobServices', parameters('StorageAccName'), 'default')]",
+                "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]"
+            ],
+            "properties": {
+                "publicAccess": "None"
+            }
+        }
+        
+    ],
+    "outputs": {}
+}
