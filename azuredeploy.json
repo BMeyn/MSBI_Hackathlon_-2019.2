@@ -4,7 +4,7 @@
     "parameters": {
         "StorageAccName": {
             "type": "string",
-            "defaultValue": "storeaccmsbi"
+            "defaultValue": "msbistorageacc"
         },
 
         "CustomVisionTrainingName":{
@@ -139,7 +139,6 @@
             "properties": {},
             "dependsOn": []
     }
-    
     ],
     "outputs": {}
 }
