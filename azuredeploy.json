@@ -14,7 +14,7 @@
         
         "CustomVisionTrainPriceTier":{
             "type": "string",
-            "defaultValue": "F0"
+            "defaultValue": "S0"
         },
 
         "CustomVisionPredictionName":{
@@ -31,7 +31,7 @@
         },
         "ComputerVisionPriceTier":{
             "type": "string",
-            "defaultValue": "S0"
+            "defaultValue": "S1"
         }  
     },
     "variables": {},
