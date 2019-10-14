@@ -6,6 +6,7 @@
             "type": "string",
             "defaultValue": "storeaccmsbi"
         },
+
         "CustomVisionTrainingName":{
             "type": "string",
             "defaultValue": "cvtraining"
@@ -23,7 +24,15 @@
         "CustomVisionPredPriceTier":{
             "type": "string",
             "defaultValue": "F0"
-        }
+        },
+        "ComputerVisionName":{
+            "type": "string",
+            "defaultValue": "mlsvision"
+        },
+        "ComputerVisionPriceTier":{
+            "type": "string",
+            "defaultValue": "F0"
+        }  
     },
     "variables": {},
     "resources": [
@@ -108,16 +117,28 @@
             "properties": {}
         },
         {
-          "apiVersion": "2016-02-01-preview",
-          "name": "[parameters('CustomVisionPredictionName')]",
-          "type": "Microsoft.CognitiveServices/accounts",
-          "location": "[resourceGroup().location]",
-          "kind": "CustomVision.Prediction",
-          "sku": {
-            "name": "[parameters('CustomVisionPredPriceTier')]"
-          },
-          "properties": {}
-        }
+            "apiVersion": "2016-02-01-preview",
+            "name": "[parameters('CustomVisionPredictionName')]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "location": "[resourceGroup().location]",
+            "kind": "CustomVision.Prediction",
+            "sku": {
+                "name": "[parameters('CustomVisionPredPriceTier')]"
+            },
+            "properties": {}
+        },
+        {
+            "type": "Microsoft.CognitiveServices/accounts",
+            "sku": {
+                "name": "[parameters('ComputerVisionPriceTier')]"
+            },
+            "kind": "ComputerVision",
+            "name": "[parameters('ComputerVisionName')]",
+            "apiVersion": "2016-02-01-preview",
+            "location": "[resourceGroup().location]",
+            "properties": {},
+            "dependsOn": []
+    }
     
     ],
     "outputs": {}
