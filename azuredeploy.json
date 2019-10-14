@@ -23,7 +23,7 @@
         },
         "CustomVisionPredPriceTier":{
             "type": "string",
-            "defaultValue": "F0"
+            "defaultValue": "S0"
         },
         "ComputerVisionName":{
             "type": "string",
@@ -31,7 +31,7 @@
         },
         "ComputerVisionPriceTier":{
             "type": "string",
-            "defaultValue": "F0"
+            "defaultValue": "S0"
         }  
     },
     "variables": {},
