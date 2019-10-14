@@ -4,7 +4,7 @@
     "parameters": {
         "StorageAccName": {
             "type": "string",
-            "defaultValue": "msbistorageacc"
+            "defaultValue": "storageacc-msbi-hackathlon"
         },
 
         "CustomVisionTrainingName":{
