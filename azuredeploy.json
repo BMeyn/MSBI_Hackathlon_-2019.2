@@ -5,6 +5,24 @@
         "StorageAccName": {
             "type": "string",
             "defaultValue": "storeaccmsbi"
+        },
+        "CustomVisionTrainingName":{
+            "type": "string",
+            "defaultValue": "cvtraining"
+        },
+        
+        "CustomVisionTrainPriceTier":{
+            "type": "string",
+            "defaultValue": "F0"
+        },
+
+        "CustomVisionPredictionName":{
+            "type": "string",
+            "defaultValue": "cvprediction"
+        },
+        "CustomVisionPredPriceTier":{
+            "type": "string",
+            "defaultValue": "F0"
         }
     },
     "variables": {},
@@ -76,8 +94,31 @@
             "properties": {
                 "publicAccess": "None"
             }
+        },
+
+        {
+            "apiVersion": "2016-02-01-preview",
+            "name": "[parameters('CustomVisionTrainingName')]",
+            "type": "Microsoft.CognitiveServices/accounts",
+            "location": "[resourceGroup().location]",
+            "kind": "CustomVision.Training",
+            "sku": {
+              "name": "[parameters('CustomVisionTrainPriceTier')]"
+            },
+            "properties": {}
+        },
+        {
+          "apiVersion": "2016-02-01-preview",
+          "name": "[parameters('CustomVisionPredictionName')]",
+          "type": "Microsoft.CognitiveServices/accounts",
+          "location": "[resourceGroup().location]",
+          "kind": "CustomVision.Prediction",
+          "sku": {
+            "name": "[parameters('CustomVisionPredPriceTier')]"
+          },
+          "properties": {}
         }
-        
+    
     ],
     "outputs": {}
 }
