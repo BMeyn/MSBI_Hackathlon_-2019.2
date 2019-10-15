@@ -8,7 +8,7 @@ ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
 
 # Replace with a valid key
 subscription_key = "f27bc63d4a8944e687627072687a73c3"
-
+prediction_resource_id = "/subscriptions/f7256e7b-4859-4bf1-af37-6d8bbf16129f/resourceGroups/MSBI-Hackathlon-2019-2ea64/providers/Microsoft.CognitiveServices/accounts/cvprediction"
 publish_iteration_name = "detectModel"
 
 trainer = CustomVisionTrainingClient(subscription_key, endpoint=ENDPOINT)
@@ -34,14 +34,10 @@ train_file_names = os.listdir(train_images_path)
 labels_df = pd.read_csv(label_path)
 
 
-
 # Go through the data table above and create the images
 print("Adding images...")
-tagged_images_with_regions = []
-
 
 #! Image need to uploaded in batches with max size of 64 samples
-
 # function to create the batches
 def batch(iterable, n=1):
     l = len(iterable)
@@ -49,7 +45,14 @@ def batch(iterable, n=1):
         yield iterable[ndx:min(ndx + n, l)]
 
 # use the batch function to create batches
+batch_num = 0
 for batch_samples in batch(train_file_names, 64):
+    batch_num =+ 1
+    print("Starting Batch: " + str(batch_num) + " / " + str((len(train_file_names)/64 )+1))
+    print(len(batch_samples))
+
+    tagged_images_with_regions = []
+
     # iterate throw all batches
     for file_name in batch_samples:
         # select the region labels from the image_redions.csv by the image_id
@@ -72,6 +75,17 @@ for batch_samples in batch(train_file_names, 64):
         print("Image batch upload failed.")
         for image in upload_result.images:
             print("Image status: ", image.status)
-        exit(-1)
 
+import time
+
+print("Training...")
+iteration = trainer.train_project(project.id)
+while (iteration.status != "Completed"):
+    iteration = trainer.get_iteration(project.id, iteration.id)
+    print("Training status: " + iteration.status)
+    time.sleep(1)
+
+# The iteration is now trained. Publish it to the project endpoint
+trainer.publish_iteration(project.id, iteration.id, publish_iteration_name, prediction_resource_id)
+print("Done!")
 
