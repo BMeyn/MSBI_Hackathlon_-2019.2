@@ -1,3 +1,9 @@
 {
-    "python.pythonPath": "C:\\Users\\meyn\\AppData\\Local\\Continuum\\anaconda3\\envs\\msbi_hackathlon\\python.exe"
+    "python.pythonPath": "c:\\Users\\meyn\\Desktop\\Projects\\Azure_Templates\\.venv\\Scripts\\python.exe",
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.scmDoBuildDuringDeployment": true,
+    "azureFunctions.pythonVenv": ".venv",
+    "azureFunctions.projectLanguage": "Python",
+    "azureFunctions.projectRuntime": "~2",
+    "debug.internalConsoleOptions": "neverOpen"
 }
