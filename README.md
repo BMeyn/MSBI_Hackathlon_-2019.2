@@ -1,4 +1,6 @@
-# MSBI_Hackathlon_-2019.2
+# MSBI_Hackathlon_2019.2
+
+![title](https://lumenlearning.com/wp-content/uploads/2019/07/Learn-By-Doing.gif)
 
 [![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://azuredeploy.net/)
 
