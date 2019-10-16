@@ -42,7 +42,10 @@
             "defaultValue": "functionappplan"
         }
     },
-    "variables": {},
+    "variables": {
+        "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
+        "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]"
+    },
     "resources": [
         {
             "name": "[parameters('StorageAccName')]",
@@ -318,6 +321,15 @@
             }
         }
     ],
-    "outputs": {}
+    "outputs": {
+        "storageAccountKey": {
+            "type": "string",
+            "value": "[listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value]"
+            },
+            "storageAccountEndpoint": {
+                "type": "string",
+                "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('StorageAccName'), ';AccountKey=', listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value, ';EndpointSuffix=core.windows.net')]"
+                }
+    }
 }
 

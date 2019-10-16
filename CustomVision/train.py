@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+''' 
+Module documentation:
+
+Project           : Electric and water meter detection
+Program name      : train.py
+Author            : Bjarne Meyn 
+Date created      : 20191016
+description       : Script to create a new Custom Vision Project, upload training images,
+                    train and puplish the model
+'''
+
+# Imports
 import os
 import pandas as pd
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
@@ -10,18 +24,25 @@ ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
 subscription_key = "f27bc63d4a8944e687627072687a73c3"
 prediction_resource_id = "/subscriptions/f7256e7b-4859-4bf1-af37-6d8bbf16129f/resourceGroups/MSBI-Hackathlon-2019-2ea64/providers/Microsoft.CognitiveServices/accounts/cvprediction"
 publish_iteration_name = "detectModel"
+project_name = "WaterMeterDetection"
+
 
 trainer = CustomVisionTrainingClient(subscription_key, endpoint=ENDPOINT)
+
+print(trainer.config.api_key)
+print(trainer.config.endpoint)
 
 # Find the object detection domain
 obj_detection_domain = next(domain for domain in trainer.get_domains() if domain.type == "ObjectDetection" and domain.name == "General")
 
+
 # Create a new project
 print ("Creating project...")
-project = trainer.create_project("WaterMeterDetection", domain_id=obj_detection_domain.id)
+project = trainer.create_project(project_name, domain_id=obj_detection_domain.id)
+print(project.id)
 
 # Create a new tag
-tag_str = "NumberArea"
+tag_str_list = "NumberArea"
 NumberArea_tag = trainer.create_tag(project.id, tag_str)
 
 
