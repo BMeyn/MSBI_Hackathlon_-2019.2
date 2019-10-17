@@ -350,13 +350,17 @@
                 "type": "string",
                 "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('StorageAccName'), ';AccountKey=', listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value, ';EndpointSuffix=core.windows.net')]"
             },
-        "Training API Key": {
+        "CustomVision Training API Key": {
             "type": "string",
             "value": "[listKeys(resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionTrainingName')), providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]).key1]"
         },
-        "Prediction API Key": {
+        "CustomVision Prediction API Key": {
         "type": "string",
         "value": "[listKeys(resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionPredictionName')), providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]).key1]"
+    },
+        "CustomVision Prediction RessourceID": {
+            "type": "string",
+            "value":"[resourceid('Microsoft.CognitiveServices/accounts',parameters('CustomVisionPredictionName'))]"
     }
     }
 }
