@@ -44,7 +44,8 @@
     },
     "variables": {
         "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
-        "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]"
+        "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]",
+        "CustomVisionTrainingKey": "[resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionTrainingName')).apiVersions[0]]"
     },
     "resources": [
         {
@@ -121,6 +122,9 @@
             "name": "[parameters('CustomVisionTrainingName')]",
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "[parameters('CustomVisionTrainingName')]"
+            },
             "sku": {
               "name": "[parameters('CustomVisionTrainPriceTier')]"
             },
@@ -132,6 +136,9 @@
             "name": "[parameters('CustomVisionPredictionName')]",
             "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
+            "tags": {
+                "displayName": "[parameters('CustomVisionPredictionName')]"
+            },
             "sku": {
                 "name": "[parameters('CustomVisionPredPriceTier')]"
             },
@@ -145,29 +152,38 @@
             },
             "kind": "ComputerVision",
             "name": "[parameters('ComputerVisionName')]",
+            "tags": {
+                "displayName": "[parameters('ComputerVisionName')]"
+            },
             "apiVersion": "2016-02-01-preview",
             "location": "[resourceGroup().location]",
             "properties": {},
             "dependsOn": []
     },
         {
-      "type": "Microsoft.Web/serverfarms",
-      "apiVersion": "2018-02-01",
-      "name": "[parameters('msbiFunctionAppPlanName')]",
-      "location": "[resourceGroup().location]",
-      "sku": {
-        "name": "Y1",
-        "tier": "Dynamic"
-      },
-      "properties": {
-        "name": "[parameters('msbiFunctionAppPlanName')]",
-        "computeMode": "Dynamic"
-      }
+            "type": "Microsoft.Web/serverfarms",
+            "apiVersion": "2018-02-01",
+            "name": "[parameters('msbiFunctionAppPlanName')]",
+            "tags": {
+                "displayName": "[parameters('msbiFunctionAppPlanName')]"
+            },
+            "location": "[resourceGroup().location]",
+            "sku": {
+            "name": "Y1",
+            "tier": "Dynamic"
+            },
+            "properties": {
+             "name": "[parameters('msbiFunctionAppPlanName')]",
+            "computeMode": "Dynamic"
+            }
     },
             {
             "type": "Microsoft.Web/sites",
             "apiVersion": "2016-08-01",
             "name": "[parameters('msbiFunctionAppName')]",
+            "tags": {
+                "displayName": "[parameters('msbiFunctionAppName')]"
+            },
             "location": "[resourceGroup().location]",
             "dependsOn": [
                 "[resourceId('Microsoft.Web/serverfarms', parameters('msbiFunctionAppPlanName'))]"
@@ -326,10 +342,14 @@
             "type": "string",
             "value": "[listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value]"
             },
-            "storageAccountEndpoint": {
+        "storageAccountEndpoint": {
                 "type": "string",
                 "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', parameters('StorageAccName'), ';AccountKey=', listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value, ';EndpointSuffix=core.windows.net')]"
-                }
+            },
+        "CustomVisionTrainingKey": {
+            "type": "string",
+            "value": "[listKeys(variables('CustomVisionTrainingKey'), variables('apiVersion')).keys[0].value]"
+            }
     }
 }
 
