@@ -330,6 +330,9 @@
             "type": "microsoft.insights/components",
             "apiVersion": "2015-05-01",
             "name": "[parameters('msbiFunctionAppName')]",
+            "tags": {
+                "displayName": "[parameters('msbiFunctionAppName')]"
+            },
             "location": "[resourceGroup().location]",
             "kind": "web",
             "properties": {
