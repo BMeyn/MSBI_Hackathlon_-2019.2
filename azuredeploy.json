@@ -45,7 +45,8 @@
     "variables": {
         "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
         "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]",
-        "CustomVisionTrainingKey": "[resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionTrainingName')).apiVersions[0]]"
+        "resourceIdCustomVisionTraining": "[resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionTrainingName'))]",
+        "apiVersionCustomVisionTraining": "[providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]]",
     },
     "resources": [
         {
@@ -348,7 +349,7 @@
             },
         "CustomVisionTrainingKey": {
             "type": "string",
-            "value": "[listKeys(variables('CustomVisionTrainingKey'), variables('apiVersion')).keys[0].value]"
+            "value": "[listKeys(variables('resourceIdCustomVisionTraining'), variables('apiVersionCustomVisionTraining')).keys[0].value]"
             }
     }
 }
