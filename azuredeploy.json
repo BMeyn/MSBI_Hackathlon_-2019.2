@@ -46,7 +46,7 @@
         "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
         "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]",
         "resourceIdCustomVisionTraining": "[resourceId('Microsoft.CognitiveServices/accounts', parameters('CustomVisionTrainingName'))]",
-        "apiVersionCustomVisionTraining": "[providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]]",
+        "apiVersionCustomVisionTraining": "[providers('Microsoft.CognitiveServices', 'accounts').apiVersions[0]]"
     },
     "resources": [
         {
