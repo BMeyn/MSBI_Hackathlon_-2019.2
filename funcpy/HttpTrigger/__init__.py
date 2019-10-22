@@ -14,7 +14,7 @@ def ComputerVisionPredict(image_path):
     text_recognition_url = endpoint + "vision/v2.0/RecognizeText"
 
     # Set image_url to the URL of an image that you want to analyze.
-    image_url = "https://storageaccmsbi.blob.core.windows.net/dropzone/Image_0.jpg"
+    image_url = image_path
 
     headers = {'Ocp-Apim-Subscription-Key': subscription_key}
     data = {'url': image_url}
@@ -48,6 +48,15 @@ def ComputerVisionPredict(image_path):
         polygons = [(line["boundingBox"], line["text"]) for line in analysis["recognitionResult"]["lines"]]
 
     return analysis
+
+
+def find_matching_box(box1, box2):
+
+    # box locations:
+    # computer vision : X: top left, Y top left, X: top right, Y: top right, X bunn 
+
+    return
+
 
 
 
@@ -88,12 +97,13 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
     # combine the BlobStorage path with the image name that has been upload to the storage
     storage_path = "https://storageaccmsbi.blob.core.windows.net"
+
     image_path = storage_path + name
 
     result = ComputerVisionPredict(image_path)
-    name = json.dumps({"test": "test"})
+    result_json = json.dumps(result)
     if name:
-        return func.HttpResponse(name)
+        return func.HttpResponse(result_json)
     else:
         return func.HttpResponse(
              "Please pass a name on the query string or in the request body",

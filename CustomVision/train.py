@@ -17,7 +17,7 @@ import pandas as pd
 from azure.cognitiveservices.vision.customvision.training import CustomVisionTrainingClient
 from azure.cognitiveservices.vision.customvision.training.models import ImageFileCreateEntry, Region
 
-
+'''
 ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
 
 # Replace with a valid key
@@ -25,7 +25,17 @@ subscription_key = "f27bc63d4a8944e687627072687a73c3"
 prediction_resource_id = "/subscriptions/f7256e7b-4859-4bf1-af37-6d8bbf16129f/resourceGroups/MSBI-Hackathlon-2019-2ea64/providers/Microsoft.CognitiveServices/accounts/cvprediction"
 publish_iteration_name = "detectModel"
 project_name = "WaterMeterDetection"
+'''
 
+ENDPOINT = "https://eastus.api.cognitive.microsoft.com/"
+
+
+# Replace with a valid key
+subscription_key = "08059cd22a544faf992751fd92344b88"
+#prediction_resource_id = "/subscriptions/f7256e7b-4859-4bf1-af37-6d8bbf16129f/resourceGroups/MSBI-Hackathlon-2019-2ea64/providers/Microsoft.CognitiveServices/accounts/cvprediction"
+#publish_iteration_name = "detectModel"
+project_name = "Objekterkennung"
+project_id = "2094ff6f-868e-45c2-8ac3-92cd3bbcebac"
 
 trainer = CustomVisionTrainingClient(subscription_key, endpoint=ENDPOINT)
 
@@ -33,17 +43,18 @@ print(trainer.config.api_key)
 print(trainer.config.endpoint)
 
 # Find the object detection domain
-obj_detection_domain = next(domain for domain in trainer.get_domains() if domain.type == "ObjectDetection" and domain.name == "General")
+#obj_detection_domain = next(domain for domain in trainer.get_domains() if domain.type == "ObjectDetection" and domain.name == "General")
 
 
 # Create a new project
-print ("Creating project...")
-project = trainer.create_project(project_name, domain_id=obj_detection_domain.id)
+#print ("Creating project...")
+
+project = trainer.get_project(project_id)
 print(project.id)
 
 # Create a new tag
 tag_str_list = "NumberArea"
-NumberArea_tag = trainer.create_tag(project.id, tag_str)
+NumberArea_tag = trainer.create_tag(project.id, tag_str_list)
 
 
 #! Upload Images
@@ -97,6 +108,7 @@ for batch_samples in batch(train_file_names, 64):
         for image in upload_result.images:
             print("Image status: ", image.status)
 
+'''
 import time
 
 print("Training...")
@@ -109,4 +121,4 @@ while (iteration.status != "Completed"):
 # The iteration is now trained. Publish it to the project endpoint
 trainer.publish_iteration(project.id, iteration.id, publish_iteration_name, prediction_resource_id)
 print("Done!")
-
+'''
