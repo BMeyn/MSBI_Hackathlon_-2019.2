@@ -15,7 +15,7 @@ The AI solution we want to build is a architecture that can read numbers from wa
 
 
 <a href="https://azuredeploy.net/
-   repository=https://github.com/BMeyn/MSBI_Hackathlon_-2019.2"
+   repository=https://github.com/BMeyn/MSBI_Hackathlon_-2019.2/azuredeploy.json"
    target="_blank">
    <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
