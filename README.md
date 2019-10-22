@@ -11,5 +11,12 @@ The AI solution we want to build is a architecture that can read numbers from wa
 
 
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)]
+
+
+
+<a href="https://azuredeploy.net/"
+   target="_blank">
+   <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
 
