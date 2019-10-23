@@ -49,7 +49,7 @@ Mit dem folgenden Kopf gelangst du direkt zu den Notebooks.
 Mit der folgenden "Deploy to Azure" Taste kannst du dir die Grundlegenden Ressourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Ressourcen selbst in Azure zusammenstellen, wenn du die Ressourcen zunächst etwas näher kennen lernene möchtest.
 
 
-<a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathlon_2019.2" target="_blank">
+<a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathon_2019.2" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
 
