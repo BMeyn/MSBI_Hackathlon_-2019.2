@@ -8,8 +8,11 @@ Bei diesem Hackathon beschäftigen wir uns mit der Umsetzung eines Azure Machine
 
 Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz entwickelt zu haben, den wir zum lernen, weiterentwickeln und am besten auch vertrieblich, nutzen können. Damit wir nicht komplett von Null starten müssen, habe ich bereits ein wenig vorarbeit geleistet und einen ersten möglichen Lösungsansatz entwickelt. Ihr solltet zunächst versuchen diesen nachzuvollziehen und die verschiedenen Serivces kennzulernen, falls ihr diese noch nicht kennt. In dem unterordner "Notebooks/" findet ihr Einführungen und Tutorials zu den verwendeten Services. 
 
+Mit dem folgenden Kopf gelangst du direkt zu den Notebooks.
 
-[![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathon-2019-2)
+[![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathon-2019-2/tree/Notebooks)
+
+
 ***********************
 
 ## <font color='#0066cc'>Agenda</font>
@@ -46,7 +49,7 @@ Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz ent
 Mit dem folgenden "Deploy to Azure" button kannst du dir die Grundlegenden Resourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Resourcen selbst in Azure zusammenstellen, wenn du die Resourcen zunächst etwas näher kennen lernene möchtest.
 
 
-<a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathlon_-2019.2" target="_blank">
+<a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathlon_2019.2" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
 
@@ -96,7 +99,7 @@ Folgend bekommst du einen kurzen Überblick zu den verwendeten Azure Ressourcen.
 
 
 # <font color='#0066cc'>Viel Spaß bei dem Hackathon!</font>
-## <font color='#0066cc'>hier noch ein GIF zur Motivation.</font>
+## <font color='#0066cc'>Hier noch ein Mativations GIF ;D.</font>
 
 <img src="https://media.giphy.com/media/24xRxrDCLxhT2/giphy.gif" width="60%">
 
