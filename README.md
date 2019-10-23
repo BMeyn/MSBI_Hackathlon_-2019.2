@@ -8,6 +8,9 @@ Bei diesem Hackathon beschäftigen wir uns mit der Umsetzung eines Azure Machine
 
 Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz entwickelt zu haben, den wir zum lernen, weiterentwickeln und am besten auch vertrieblich, nutzen können. Damit wir nicht komplett von Null starten müssen, habe ich bereits ein wenig vorarbeit geleistet und einen ersten möglichen Lösungsansatz entwickelt. Ihr solltet zunächst versuchen diesen nachzuvollziehen und die verschiedenen Serivces kennzulernen, falls ihr diese noch nicht kennt. In dem unterordner "Notebooks/" findet ihr Einführungen und Tutorials zu den verwendeten Services. 
 
+
+[![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathlon)
+
 ***********************
 
 ## <font color='#0066cc'>Agenda</font>
