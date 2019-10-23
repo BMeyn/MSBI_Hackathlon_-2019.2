@@ -3,23 +3,21 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "StorageAccName": {
-            "type": "string",
-            "defaultValue": "storageaccmsbi"
+            "type": "string"
         },
 
         "CustomVisionTrainingName":{
             "type": "string",
-            "defaultValue": "cvtraining"
+            "defaultValue": "CustomVisionTraining"
         },
         
         "CustomVisionTrainPriceTier":{
             "type": "string",
             "defaultValue": "S0"
         },
-
         "CustomVisionPredictionName":{
             "type": "string",
-            "defaultValue": "cvprediction"
+            "defaultValue": "CustomVisionPrediction"
         },
         "CustomVisionPredPriceTier":{
             "type": "string",
@@ -27,7 +25,7 @@
         },
         "ComputerVisionName":{
             "type": "string",
-            "defaultValue": "mlsvision"
+            "defaultValue": "ComputerVision"
         },
         "ComputerVisionPriceTier":{
             "type": "string",
