@@ -57,10 +57,10 @@
         {
             "type": "Microsoft.KeyVault/vaults",
             "apiVersion": "2018-02-14",
-            "name": parameters('KeyVaultName'),
+            "name": "[parameters('KeyVaultName')]",
             "location": "[resourceGroup().location]",
             "tags": {
-                "displayName": parameters('KeyVaultName')
+                "displayName": "[parameters('KeyVaultName')]"
             },
             "properties": {
                 "enabledForDeployment": true,
