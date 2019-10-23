@@ -36,6 +36,7 @@
             "type": "string",
             "defaultValue": "S1"
         },
+        
         "LogicAppName": {
             "type": "string",
             "defaultValue": "msbiLogicApp"
