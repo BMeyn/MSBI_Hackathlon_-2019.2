@@ -68,6 +68,7 @@
                 "accountType": "Standard_LRS"
             }
         },
+        
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices",
             "apiVersion": "2019-04-01",
