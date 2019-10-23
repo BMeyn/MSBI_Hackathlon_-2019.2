@@ -1,22 +1,104 @@
 
-![title](https://3er1viui9wo30pkxh1v2nh4w-wpengine.netdna-ssl.com/wp-content/uploads/2017/02/output_wgZdRV.gif)
+<img src="media/PowerPointImages/msbi_hackathlon.jpg" width="60%">
 
-# MSBI_Hackathon_2019.2
+***********************
+# <font color='#0066cc'>Herzlich Willkommen zum MSBI Hackathlon 2019.2!</font>
 
-Welcome to second MSBI hackathlon 2019!
+Bei diesem Hackathon beschäftigen wir uns mit der Umsetzung eines Azure Machine Learning Projektes. Genauer gesagt geht es um das Erkennen und Auslesen der Zählerstände von Strom- und Wasserzählern. Wir werden uns allerdings nicht nur um die Entwicklung eines Machine Learning Modells kümmern, sondern uns auch Gedanken zu der Datenbereitstellung, Produktivnahme, Visualisierung und zu dem Monitoring machen. 
 
-This time we want to take a closer look at the Azure Maschine AI Services. We will try to build a end to end AI solution. Therfore we will use different Azure Ressources and hopefully you will learn something new on the way.
+Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz entwickelt zu haben, den wir zum lernen, weiterentwickeln und am besten auch vertrieblich, nutzen können. Damit wir nicht komplett von Null starten müssen, habe ich bereits ein wenig vorarbeit geleistet und einen ersten möglichen Lösungsansatz entwickelt. Ihr solltet zunächst versuchen diesen nachzuvollziehen und die verschiedenen Serivces kennzulernen, falls ihr diese noch nicht kennt. In dem unterordner "Notebooks/" findet ihr Einführungen und Tutorials zu den verwendeten Services. 
 
-The AI solution we want to build is a architecture that can read numbers from water and electic meters. The aim is to get the full solution running. That means we will use Azure Maschine Learning Services to create the Machine Learning Model and a Azure Function App to trigger the Model if we write a new image into a blob or DataLake storage.
+***********************
+
+## <font color='#0066cc'>Agenda</font>
+
+<img src="media/PowerPointImages/Agenda.jpg" width="60%">
 
 
+***********************
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+## <font color='#0066cc'>Thema des Hackathon</font>
+
+<img src="media/PowerPointImages/theme.jpg" width="60%">
+
+**Extra Links:**
+
+**- [Serverless](https://azure.microsoft.com/de-de/overview/serverless-computing/)**
+**- [Azure AI Services](https://azure.microsoft.com/de-de/overview/ai-platform/)**
+**- [Cognetive Serives](https://docs.microsoft.com/de-de/azure/cognitive-services/welcome)**
+**- [Azure AI Serives Demos](https://aidemos.microsoft.com/)**
+
+***********************
+
+## <font color='#0066cc'>Aufgabenstellung</font>
+
+<img src="media/PowerPointImages/challange.jpg" width="60%">
+
+***********************
+
+## <font color='#0066cc'>Architektur</font>
 
 
-<a href="https://azuredeploy.net/
-   repository=https://github.com/BMeyn/MSBI_Hackathlon_-2019.2/azuredeploy.json"
-   target="_blank">
-   <img src="http://azuredeploy.net/deploybutton.png"/>
+<img src="media/PowerPointImages/architcture.jpg" width="80%">
+
+Mit dem folgenden "Deploy to Azure" button kannst du dir die Grundlegenden Resourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Resourcen selbst in Azure zusammenstellen, wenn du die Resourcen zunächst etwas näher kennen lernene möchtest.
+
+
+<a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathlon_-2019.2" target="_blank">
+    <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
+
+
+
+**Extra Links:**
+
+**- [ARM-Templates](https://docs.microsoft.com/en-us/azure/templates/)**
+**- [Deploy-to_Azure](https://azure.microsoft.com/de-de/blog/deploy-to-azure-button-for-azure-websites-2/)**
+**- [Azure Automation](https://docs.microsoft.com/de-de/azure/automation/automation-intro)**
+
+
+***********************
+
+## <font color='#0066cc'>Azure Ressourcen:</font>
+
+Folgend bekommst du einen kurzen Überblick zu den verwendeten Azure Ressourcen. In den jeweiligen Tutorials findest du auch noch zusätzliche Links und Informationen zu den einzelnen Services. 
+
+
+<img src="media/PowerPointImages/PowerApps.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/blobtorage.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/logicapp.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/customvision.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/cognetive.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/data.jpg" width="60%">
+
+***********************
+
+<img src="media/PowerPointImages/howto.jpg" width="60%">
+
+***********************
+
+
+# <font color='#0066cc'>Viel Spaß bei dem Hackathon!</font>
+## <font color='#0066cc'>hier noch ein GIF zur Motivation.</font>
+
+<img src="https://media.giphy.com/media/24xRxrDCLxhT2/giphy.gif" width="60%">
+
+***********************
+
+
 
