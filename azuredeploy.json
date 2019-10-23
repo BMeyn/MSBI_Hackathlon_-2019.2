@@ -34,10 +34,6 @@
         "ComputerVisionPriceTier":{
             "type": "string",
             "defaultValue": "S1"
-        },
-        "LogicAppName":{
-            "type": "string",
-             "defaultValue": "msbiLogicApp"
         }
     },
     "variables": {
@@ -159,7 +155,7 @@
             "dependsOn": []
         },
         {
-            "name": "[parameters('LogicAppName')]",
+            "name": "LogicApp15626",
             "type": "Microsoft.Logic/workflows",
             "apiVersion": "2016-06-01",
             "location": "[resourceGroup().location]",
