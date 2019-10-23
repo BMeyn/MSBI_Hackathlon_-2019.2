@@ -112,10 +112,10 @@
                 "publicAccess": "None"
             }
         },
-        {
+        {   
+            "type": "Microsoft.CognitiveServices/accounts",
             "apiVersion": "2016-02-01-preview",
             "name": "[parameters('CustomVisionTrainingName')]",
-            "type": "Microsoft.CognitiveServices/accounts",
             "location": "[resourceGroup().location]",
             "tags": {
                 "displayName": "[parameters('CustomVisionTrainingName')]"
