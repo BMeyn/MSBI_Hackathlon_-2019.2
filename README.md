@@ -46,13 +46,16 @@ Mit dem folgenden Kopf gelangst du direkt zu den Notebooks.
 
 <img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/architcture.jpg" width="80%">
 
-Mit dem folgenden "Deploy to Azure" button kannst du dir die Grundlegenden Resourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Resourcen selbst in Azure zusammenstellen, wenn du die Resourcen zunächst etwas näher kennen lernene möchtest.
+Mit der folgenden "Deploy to Azure" Taste kannst du dir die Grundlegenden Ressourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Ressourcen selbst in Azure zusammenstellen, wenn du die Ressourcen zunächst etwas näher kennen lernene möchtest.
 
 
 <a href="https://azuredeploy.net/?repository=https://github.com/BMeyn/MSBI_Hackathlon_2019.2" target="_blank">
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
 
+<a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/BMeyn/MSBI_Hackathon_2019.2/master/azuredeploy.json" target="_blank">
+    <img src="http://armviz.io/visualizebutton.png"/>
+</a>
 
 
 **Extra Links:**
@@ -98,7 +101,7 @@ Folgend bekommst du einen kurzen Überblick zu den verwendeten Azure Ressourcen.
 ***********************
 
 
-# <font color='#0066cc'>Viel Spaß bei dem Hackathon!</font>
+# <font color='#0066cc'>Viel Spaß beim Hackathon!</font>
 ## <font color='#0066cc'>Hier noch ein Mativations GIF ;D.</font>
 
 <img src="https://media.giphy.com/media/24xRxrDCLxhT2/giphy.gif" width="60%">
