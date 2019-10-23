@@ -175,7 +175,7 @@
         "CustomVision Prediction RessourceID": {
             "type": "string",
             "value":"[resourceid('Microsoft.CognitiveServices/accounts',parameters('CustomVisionPredictionName'))]"
-    }
+        }
     }
 }
 
