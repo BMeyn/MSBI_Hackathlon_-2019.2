@@ -68,7 +68,6 @@
                 "accountType": "Standard_LRS"
             }
         },
-        
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices",
             "apiVersion": "2019-04-01",
@@ -153,7 +152,7 @@
             "kind": "CustomVision.Prediction",
             "properties": {}
         },
-            {
+        {
           "type": "Microsoft.Logic/workflows",
           "apiVersion": "2016-06-01",
           "name": "[parameters('LogicAppName')]",
@@ -161,10 +160,7 @@
           "tags": {
             "displayName": "LogicApp"
           },
-          "properties": {
-            "definition": {},
-            "parameters": {}
-          }
+          "properties": {}
         }
         ],
     "outputs": {
