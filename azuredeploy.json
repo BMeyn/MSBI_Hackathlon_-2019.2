@@ -40,7 +40,14 @@
         "LogicAppName": {
             "type": "string",
             "defaultValue": "msbiLogicApp"
+        },    
+        "testUri": {
+            "type": "string",
+            "defaultValue": "http://azure.microsoft.com/en-us/status/feed/",
+            "metadata": {
+            "description": "A test URI"
         }
+    }
     },
     "variables": {
         "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
@@ -145,31 +152,47 @@
             "kind": "CustomVision.Prediction",
             "properties": {}
         },
-        {
-            "type": "Microsoft.CognitiveServices/accounts",
-            "sku": {
-                "name": "[parameters('ComputerVisionPriceTier')]"
+            {
+          "type": "Microsoft.Logic/workflows",
+          "apiVersion": "2016-06-01",
+          "name": "[parameters('LogicAppName')]",
+          "location": "[resourceGroup().location]",
+          "tags": {
+            "displayName": "LogicApp"
+          },
+          "properties": {
+            "definition": {
+              "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+              "contentVersion": "1.0.0.0",
+              "parameters": {
+                "testUri": {
+                  "type": "string",
+                  "defaultValue": "[parameters('testUri')]"
+                }
+              },
+              "triggers": {
+                "recurrence": {
+                  "type": "recurrence",
+                  "recurrence": {
+                    "frequency": "Hour",
+                    "interval": 1
+                  }
+                }
+              },
+              "actions": {
+                "http": {
+                  "type": "Http",
+                  "inputs": {
+                    "method": "GET",
+                    "uri": "@parameters('testUri')"
+                  },
+                  "runAfter": {}
+                }
+              },
+              "outputs": {}
             },
-            "kind": "ComputerVision",
-            "name": "[parameters('ComputerVisionName')]",
-            "tags": {
-                "displayName": "[parameters('ComputerVisionName')]"
-            },
-            "apiVersion": "2016-02-01-preview",
-            "location": "[resourceGroup().location]",
-            "properties": {},
-            "dependsOn": []
-        },
-        {
-            "name": "[parameters('LogicAppName')]",
-            "type": "Microsoft.Logic/workflows",
-            "apiVersion": "2016-06-01",
-            "location": "[resourceGroup().location]",
-            "properties": {
-                "definition": {
-                },
-                "parameters": {}
-            }
+            "parameters": {}
+          }
         }
         ],
     "outputs": {
