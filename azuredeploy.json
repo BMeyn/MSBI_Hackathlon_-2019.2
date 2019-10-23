@@ -87,20 +87,15 @@
                     "name": "standard",
                     "family": "A"
                 }
-            },
-            "resources": [
-                {
-                    "type": "secrets",
-                    "name": "keyVaultSecret1",
-                    "apiVersion": "2016-10-01",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.KeyVault/vaults', 'keyVault1')]"
-                    ],
-                    "properties": {
-                        "value": "secretValue"
-                    }
-                }
-            ]
+            }
+        },
+        {
+            "name": "keyVault1/keyVaultSecret1",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2018-02-14",
+            "properties": {
+                "value": "test"
+            }
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices",
