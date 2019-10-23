@@ -56,8 +56,8 @@
             ],
             "metadata": {
                 "description": "Specifies whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault."
-      }
-    },
+            }
+        },
         "enabledForTemplateDeployment": {
             "type": "bool",
             "defaultValue": false,
@@ -136,7 +136,7 @@
             ],
             "properties": {
                 "publicAccess": "None"
-        }
+            }
         },
         {
             "type": "Microsoft.Storage/storageAccounts/blobServices/containers",
@@ -150,7 +150,6 @@
                 "publicAccess": "None"
             }
         },
-
         {
             "apiVersion": "2016-02-01-preview",
             "name": "[parameters('CustomVisionTrainingName')]",
