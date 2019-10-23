@@ -72,7 +72,8 @@
             "allowedValues": [
                 "Standard",
                 "Premium"
-      ]
+            ]
+        }
     },
     "variables": {
         "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccName'))]",
