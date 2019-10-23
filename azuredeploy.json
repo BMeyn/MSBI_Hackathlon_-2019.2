@@ -161,36 +161,7 @@
             "displayName": "LogicApp"
           },
           "properties": {
-            "definition": {
-              "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
-              "contentVersion": "1.0.0.0",
-              "parameters": {
-                "testUri": {
-                  "type": "string",
-                  "defaultValue": "[parameters('testUri')]"
-                }
-              },
-              "triggers": {
-                "recurrence": {
-                  "type": "recurrence",
-                  "recurrence": {
-                    "frequency": "Hour",
-                    "interval": 1
-                  }
-                }
-              },
-              "actions": {
-                "http": {
-                  "type": "Http",
-                  "inputs": {
-                    "method": "GET",
-                    "uri": "@parameters('testUri')"
-                  },
-                  "runAfter": {}
-                }
-              },
-              "outputs": {}
-            },
+            "definition": {},
             "parameters": {}
           }
         }
