@@ -3,7 +3,8 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "StorageAccName": {
-            "type": "string"
+            "type": "string",
+            "defaultValue": "1234teststorageacc"
         },
 
         "CustomVisionTrainingName":{
@@ -27,8 +28,7 @@
         },
 
         "ComputerVisionName":{
-            "type": "string",
-            "defaultValue": "ComputerVision"
+            "type": "string"
         },
 
         "ComputerVisionPriceTier":{
