@@ -1,5 +1,5 @@
 
-<img src="media/PowerPointImages/msbi_hackathlon.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/msbi_hackathlon.jpg" width="60%">
 
 ***********************
 # <font color='#0066cc'>Herzlich Willkommen zum MSBI Hackathlon 2019.2!</font>
@@ -9,20 +9,19 @@ Bei diesem Hackathon beschäftigen wir uns mit der Umsetzung eines Azure Machine
 Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz entwickelt zu haben, den wir zum lernen, weiterentwickeln und am besten auch vertrieblich, nutzen können. Damit wir nicht komplett von Null starten müssen, habe ich bereits ein wenig vorarbeit geleistet und einen ersten möglichen Lösungsansatz entwickelt. Ihr solltet zunächst versuchen diesen nachzuvollziehen und die verschiedenen Serivces kennzulernen, falls ihr diese noch nicht kennt. In dem unterordner "Notebooks/" findet ihr Einführungen und Tutorials zu den verwendeten Services. 
 
 
-[![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathlon)
-
+[![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathon-2019-2)
 ***********************
 
 ## <font color='#0066cc'>Agenda</font>
 
-<img src="media/PowerPointImages/Agenda.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/Agenda.jpg" width="60%">
 
 
 ***********************
 
 ## <font color='#0066cc'>Thema des Hackathon</font>
 
-<img src="media/PowerPointImages/theme.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/theme.jpg" width="60%">
 
 **Extra Links:**
 
@@ -35,14 +34,14 @@ Das Ziel des Hackthons soll es sein, am Ende mindestens einen Lösungsansatz ent
 
 ## <font color='#0066cc'>Aufgabenstellung</font>
 
-<img src="media/PowerPointImages/challange.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/challange.jpg" width="60%">
 
 ***********************
 
 ## <font color='#0066cc'>Architektur</font>
 
 
-<img src="media/PowerPointImages/architcture.jpg" width="80%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/architcture.jpg" width="80%">
 
 Mit dem folgenden "Deploy to Azure" button kannst du dir die Grundlegenden Resourcen der Architektur in Azure erstellen. Du kannst dir aber natürlich auch die Resourcen selbst in Azure zusammenstellen, wenn du die Resourcen zunächst etwas näher kennen lernene möchtest.
 
@@ -67,31 +66,31 @@ Mit dem folgenden "Deploy to Azure" button kannst du dir die Grundlegenden Resou
 Folgend bekommst du einen kurzen Überblick zu den verwendeten Azure Ressourcen. In den jeweiligen Tutorials findest du auch noch zusätzliche Links und Informationen zu den einzelnen Services. 
 
 
-<img src="media/PowerPointImages/PowerApps.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/PowerApps.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/blobtorage.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/blobtorage.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/logicapp.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/logicapp.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/customvision.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/customvision.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/cognetive.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/cognetive.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/data.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/data.jpg" width="60%">
 
 ***********************
 
-<img src="media/PowerPointImages/howto.jpg" width="60%">
+<img src="https://media.githubusercontent.com/media/BMeyn/MSBI_Hackathon_2019.2/master/media/PowerPointImages/howto.jpg" width="60%">
 
 ***********************
 
