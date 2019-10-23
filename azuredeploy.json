@@ -35,44 +35,9 @@
             "type": "string",
             "defaultValue": "S1"
         },
-
-        "KeyVaultName":{
-            "type": "string"
-        },
-
-        "tenantId": {
-        "type": "string",
-        "defaultValue": "[subscription().tenantId]",
-        "metadata": {
-            "description": "Specifies the Azure Active Directory tenant ID that should be used for authenticating requests to the key vault. Get it by using Get-AzSubscription cmdlet."
-        }
-        },
-        "enabledForDeployment": {
-            "type": "bool",
-            "defaultValue": false,
-            "allowedValues": [
-                true,
-                false
-            ],
-            "metadata": {
-                "description": "Specifies whether Azure Virtual Machines are permitted to retrieve certificates stored as secrets from the key vault."
-            }
-        },
-        "enabledForTemplateDeployment": {
-            "type": "bool",
-            "defaultValue": false,
-            "allowedValues": [
-                true,
-                false
-              ]
-        },    
-            "skuName": {
+        "LogicAppName":{
             "type": "string",
-            "defaultValue": "Standard",
-            "allowedValues": [
-                "Standard",
-                "Premium"
-            ]
+             "defaultValue": "msbiLogicApp"
         }
     },
     "variables": {
@@ -192,6 +157,17 @@
             "location": "[resourceGroup().location]",
             "properties": {},
             "dependsOn": []
+        },
+        {
+            "name": "[parameters('LogicAppName')]",
+             "type": "Microsoft.Logic/workflows",
+            "location":  "[resourceGroup().location]",
+            "apiVersion": "2016-06-01",
+            "dependsOn": [
+            ],
+            "tags": {
+                "displayName": "LogicApp"
+            }
         }
         ],
     "outputs": {
