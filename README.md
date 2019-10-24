@@ -52,9 +52,6 @@ Mit der folgenden "Deploy to Azure" Taste kannst du dir die Grundlegenden Ressou
     <img src="https://azuredeploy.net/deploybutton.png"/>
 </a>
 
-<a href="https://azuredeploy.net/" target="_blank">
-    <img src="https://azuredeploy.net/deploybutton.svg"/>
-</a>
 
 <a href="http://armviz.io/#/?load=https://raw.githubusercontent.com/BMeyn/MSBI_Hackathon_2019.2/master/azuredeploy.json" target="_blank">
     <img src="http://armviz.io/visualizebutton.png"/>
