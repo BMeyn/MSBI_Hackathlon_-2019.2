@@ -12,7 +12,6 @@ Mit dem folgenden Kopf gelangst du direkt zu den Notebooks.
 
 [![Azure Notebooks](https://notebooks.azure.com/launch.svg)](https://notebooks.azure.com/bjarne-meyn-juopna/projects/msbi-hackathon-2019-2/tree/Notebooks)
 
-
 ***********************
 
 ## <font color='#0066cc'>Agenda</font>
